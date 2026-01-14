@@ -1,0 +1,152 @@
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile First - Small devices (phones, 320px and up) */
+@media (max-width: 480px) {
+  .app {
+    padding: 12px;
+  }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .app {
+    padding: 16px;
+  }
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+}
+
+.app-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.95) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  .app-header {
+    margin-bottom: 24px;
+    padding: 20px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    margin-bottom: 20px;
+    padding: 16px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .app-header p {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header p {
+    font-size: 0.9rem;
+    padding: 0 4px;
+    line-height: 1.4;
+  }
+}
+
+/* Landscape orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app-header {
+    margin-bottom: 16px;
+    padding: 16px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .app-header p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .app {
+    padding: 8px;
+  }
+
+  .app-header {
+    padding: 12px 8px;
+    margin-bottom: 16px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .app-header p {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
